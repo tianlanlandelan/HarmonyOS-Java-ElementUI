@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#ZH-CN_TOPIC_0000001154985555__section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('/Users/yangkaile/.ohos/config/auto_debug_58366531.p12')
+            storePassword '000000189F73C9E392ED281110032914F5650585D245A7FEC6F34FC262631A00965E92D83AB63C40'
+            keyAlias = 'debugKey'
+            keyPassword '000000184AE980CBCC5ADE05321B46701AD315263ABB98DB50CC0A4789F40E220F0CDED0608F2E83'
+            signAlg = 'SHA256withECDSA'
+            profile file('/Users/yangkaile/.ohos/config/auto_debug_elementui_58366531.p7b')
+            certpath file('/Users/yangkaile/.ohos/config/auto_debug_58366531.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.4.2'
+        classpath 'com.huawei.ohos:decctest:1.2.4.0'
+        classpath "io.freefair.gradle:lombok-plugin:6.0.0-m2"
+
+    }
+}
+
+apply plugin: "io.freefair.lombok"
+
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        jcenter()
+    }
+}
