@@ -16,3 +16,5 @@
 - template ：HarmonyOS 布局模板
 
 ### 界面效果
+
+![首页](screenshot/index.jpg)
