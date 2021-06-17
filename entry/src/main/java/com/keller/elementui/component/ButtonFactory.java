@@ -29,6 +29,12 @@ public class ButtonFactory {
         return button;
     }
 
+    /**
+     * 圆角按钮
+     * @param context
+     * @param name
+     * @return
+     */
     public static Button getRoundButton(Context context,String name){
         Button button = initButton(context,KellerConfig.ROUND_RADIUS);
         button.setText(name);

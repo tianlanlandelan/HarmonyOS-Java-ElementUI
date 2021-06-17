@@ -1,6 +1,5 @@
 package com.keller.elementui.component;
 
-import com.keller.elementui.config.KellerConfig;
 import ohos.agp.components.Picker;
 import ohos.app.Context;
 
@@ -29,6 +28,7 @@ public class PickerFactory {
 
         picker.setNormalTextSize(40);
         picker.setSelectedTextSize(60);
+        picker.setWheelModeEnabled(true);
 
         picker.setValueChangedListener((picker1, oldVal, newVal) -> {
             // oldVal:上一次选择的值； newVal：最新选择的值
